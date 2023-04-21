@@ -1,6 +1,7 @@
 require('plugins')
 require('remap')
 require('github-theme').setup()
+require("mason").setup()
 
 local set = vim.opt
 set.tabstop = 2
