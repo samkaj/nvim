@@ -38,6 +38,7 @@ return require("packer").startup(function(use)
 
 	-- Git stuff
 	use("tpope/vim-fugitive")
+	use("airblade/vim-gitgutter")
 
 	-- LSP stuff
 	use({
