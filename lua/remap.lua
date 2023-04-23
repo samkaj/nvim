@@ -2,11 +2,12 @@ local api = vim.api
 local builtin = require("telescope.builtin")
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>fr", function()
-  vim.cmd("vsplit")
-  vim.cmd("Ex")
+	vim.cmd("vsplit")
+	vim.cmd("Ex")
 end)
-vim.keymap.set("n", "<leader>fe", function() vim.cmd("Ex") end)
+vim.keymap.set("n", "<leader>fe", function()
+	vim.cmd("Ex")
+end)
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {}) -- Search for file
-vim.keymap.set("n", "<leader>fg", builtin.live_grep, {}) -- Search for token 
-
--- Format on save
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, {}) -- Search for token
+vim.keymap.set("n", "<leader>p", function() vim.cmd("Neoformat") end)
