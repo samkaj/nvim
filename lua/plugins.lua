@@ -39,15 +39,17 @@ return require("packer").startup(function(use)
 	})
 
 	-- GitHub colors
-	use({
-		"projekt0n/github-nvim-theme",
-		tag = "v0.0.7",
-		config = function()
-			require("github-theme").setup({
-				transparent = true,
-			})
-		end,
-	})
+	-- use({
+	-- 	"projekt0n/github-nvim-theme",
+	-- 	tag = "v0.0.7",
+	-- 	config = function()
+	-- 		require("github-theme").setup({
+	-- 			transparent = true,
+	-- 		})
+	-- 	end,
+	-- })
+
+  use({"aktersnurra/no-clown-fiesta.nvim"})
 
 	-- Git stuff
 	use("tpope/vim-fugitive")
