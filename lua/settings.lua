@@ -31,7 +31,6 @@ vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>fe", ":Ex<CR>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<leader>fr", ":vspl<CR><Esc>:Ex<CR>", { noremap = true })
 
-
 -- Telescope
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
@@ -41,7 +40,7 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 vim.keymap.set("n", "<leader>fd", builtin.git_files, {})
 
 -- Format
-vim.api.nvim_set_keymap('n', '<leader>p', ':Neoformat<CR>', { noremap = true })
+vim.api.nvim_set_keymap("n", "<leader>p", ":Neoformat<CR>", { noremap = true })
 
 -- Colors
 vim.cmd("colorscheme tokyonight")
@@ -49,3 +48,12 @@ vim.cmd("colorscheme tokyonight")
 -- IncRename
 vim.keymap.set("n", "<leader>rn", ":IncRename ")
 
+-- Harpoon
+vim.keymap.set("n", "<leader>hh", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", { silent = true })
+vim.keymap.set("n", "<leader>hc", ":lua require('harpoon.mark').add_file()<CR>", { silent = true })
+
+-- No header
+vim.cmd("let g:netrw_banner = 0")
+
+-- Yank into system clipboard
+vim.opt.clipboard = "unnamedplus"

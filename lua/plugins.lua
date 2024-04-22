@@ -81,15 +81,14 @@ local plugins = {
 	-- Complete parentheses
 	{
 		"windwp/nvim-autopairs",
-		event = "InsertEnter",
 	},
 
 	{
 		"smjonas/inc-rename.nvim",
-		config = function()
-			require("inc_rename").setup()
-		end,
 	},
+    {
+        "ThePrimeagen/harpoon",
+    }
 }
 
 -- Load the plugins
@@ -100,6 +99,7 @@ local lazy_opts = {
 		title_pos = "center",
 	},
 }
+
 require("lazy").setup(plugins, lazy_opts)
 
 require("gitsigns").setup()
