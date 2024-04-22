@@ -37,7 +37,7 @@ My personal neovim configuration.
     - *WIP, have not used it much yet*
 
 - Autocompletion with nvim-comp
-    - Intellisenese-like autocompletion
+    - Intellisense-like autocompletion
     - `<C-Space>` to trigger suggestions
 
 - Formatting with Neoformat
