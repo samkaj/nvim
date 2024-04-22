@@ -16,8 +16,7 @@ My personal neovim configuration.
   - `<leader>fg` to grep symbols
 - Buffer handling with Harpoon
   - `<leader>hh` to toggle the Harpoon window
-  - `<leader>ha` to add the current buffer to the Harpoon window
-  - `<leader>hc` to remove the current buffer from the Harpoon window
+  - `<leader>hc` to add the current buffer to the Harpoon window
 - Git integration with Fugitive
 - Language support with Treesitter
   - Syntax highlighting with `:TSInstall <language>`
