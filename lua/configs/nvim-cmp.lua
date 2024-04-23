@@ -22,9 +22,8 @@ cmp.setup({
 				fallback()
 			end
 		end,
-		["<CR>"] = cmp.mapping.confirm({ select = true }),
-		["<C-e>"] = cmp.mapping.abort(),
-		["<Esc>"] = cmp.mapping.close(),
+		["<CR>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace }),
+		["<Esc>"] = cmp.mapping.abort(),
 		["<C-d>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 	}),
@@ -39,7 +38,6 @@ cmp.setup({
 		{ name = "vsnip" },
 		{ name = "path" },
 		{ name = "buffer", keyword_length = 2 },
-		{ name = "emoji", insert = true },
 	},
 	completion = {
 		keyword_length = 1,
