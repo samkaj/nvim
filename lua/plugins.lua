@@ -81,7 +81,6 @@ local plugins = {
 	{
 		"windwp/nvim-autopairs",
 	},
-
 	{
 		"smjonas/inc-rename.nvim",
 	},
@@ -102,6 +101,8 @@ local lazy_opts = {
 require("lazy").setup(plugins, lazy_opts)
 
 require("gitsigns").setup()
+require("inc_rename").setup()
+require("nvim-autopairs").setup()
 require("configs.lsp")
 require("configs.lualine")
 require("configs.nvim-cmp")
