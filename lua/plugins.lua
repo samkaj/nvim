@@ -43,12 +43,7 @@ local plugins = {
 		event = "VeryLazy",
 	},
 	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {
-			transparent = true,
-		},
+		"rebelot/kanagawa.nvim",
 	},
 
 	-- Treesitter
@@ -84,9 +79,12 @@ local plugins = {
 	{
 		"smjonas/inc-rename.nvim",
 	},
-    {
-        "ThePrimeagen/harpoon",
-    }
+	{
+		"ThePrimeagen/harpoon",
+	},
+
+	-- Indent highlighting
+	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 }
 
 -- Load the plugins
@@ -103,6 +101,8 @@ require("lazy").setup(plugins, lazy_opts)
 require("gitsigns").setup()
 require("inc_rename").setup()
 require("nvim-autopairs").setup()
+require("ibl").setup()
+require("configs.kanagawa")
 require("configs.lsp")
 require("configs.lualine")
 require("configs.nvim-cmp")
